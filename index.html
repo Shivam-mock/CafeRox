@@ -5,58 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cafe Rox — Good Coffee, Good Mood</title>
 
-  <!-- Stylesheet: all design tokens (colors/fonts/spacing) live at
-       the top of css/style.css in the "THEME CONFIGURATION" section -->
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ============================================================
-       NAVBAR COMPONENT
-       Content is injected by Renderer.renderNavbar() in js/app.js,
-       reading from CAFE_SETTINGS in data/settings.js
-  ============================================================= -->
   <header class="navbar" id="navbar-root"></header>
 
-  <!-- ============================================================
-       HERO COMPONENT
-       Content is injected by Renderer.renderHero() in js/app.js
-  ============================================================= -->
   <section class="hero" id="hero-root"></section>
 
-  <!-- ============================================================
-       MAIN CONTENT: Menu (search + filters + product grid) and
-       the Cart Panel side by side
-  ============================================================= -->
   <main class="page-grid">
 
     <section class="menu-section" id="menu">
       <h2 class="section-title">Our Menu 🌿</h2>
 
-      <!-- Search & Filter Toolbar Component -->
       <div class="menu-toolbar" id="toolbar-root"></div>
 
-      <!-- Product Cards Component (dynamically generated) -->
       <div class="menu-grid" id="menu-grid"></div>
     </section>
 
-    <!-- Cart Panel Component -->
     <aside class="cart-panel" id="cart-root"></aside>
 
   </main>
 
-  <!-- ============================================================
-       FOOTER COMPONENT
-  ============================================================= -->
   <footer class="footer" id="footer-root"></footer>
 
-  <!-- ============================================================
-       SCRIPTS
-       Load order matters: settings & menu data first, then the
-       app logic that depends on them.
-  ============================================================= -->
-<script src="settings.js"></script>
-<script src="menu.js"></script>
-<script src="app.js"></script>
+  <script src="settings.js"></script>
+  <script src="menu.js"></script>
+  <script src="app.js"></script>
+
 </body>
 </html>
